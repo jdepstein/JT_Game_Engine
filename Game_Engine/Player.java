@@ -71,21 +71,21 @@ public class Player{
 		return is_playing;}
 
 	/**
-	 * @return HashMap<String, ArrayList<Game_Object>>: The player's object Map
+	 * @return HashMap: The player's object Map
 	 */
 	public HashMap<String, ArrayList<Game_Object>> getObjects() {
 		return objects;}
 
 	/**
 	 * @param key String: The type objects that you are looking for
-	 * @return ArrayList<Game_Object>: The list of objects that matches the given in key in the player's object
+	 * @return ArrayList: The list of objects that matches the given in key in the player's object
 	 */
 	public ArrayList<Game_Object> get_object(String key) {
 		return this.objects.get(key);}
 	
 	/**
 	 * @param key String: The key that will represent the Game_Objects list 
-	 * @param value ArrayList<Game_Object>: The list of objects that match with given key
+	 * @param value ArrayList: The list of objects that match with given key
 	 */
 	public void setObjects(String key, ArrayList<Game_Object> value) {
 		this.objects.put(key, value);}
@@ -102,14 +102,14 @@ public class Player{
 
 	/**
 	 * @param key String: The key that represent the Game_Texts list you are adding to 
-	 * @param value ArrayList<Game_Object>: The list of objects that match with given key
+	 * @param value ArrayList: The list of objects that match with given key
 	 */
 	public void setGame_text(String key, ArrayList<Game_Text> value) {
 		this.game_text.put(key, value);}
 	
 	
 	/**
-	 * @return ArrayList<Game_Text>: The values in the players Game_Text Map made into a list 
+	 * @return ArrayList: The values in the players Game_Text Map made into a list 
 	 */
 	public ArrayList<Game_Text> getAll_Text(){
 		ArrayList<Game_Text> allObjects = new ArrayList<Game_Text> ();
@@ -118,7 +118,7 @@ public class Player{
 		return allObjects;}
 	
 	/**
-	 * @return ArrayList<Game_Object>: The values in the players Game_Object Map made into a list 
+	 * @return ArrayList: The values in the players Game_Object Map made into a list 
 	 */
 	public ArrayList<Game_Object> getAllObjects() {
 		ArrayList<Game_Object> allObjects = new ArrayList<Game_Object>();

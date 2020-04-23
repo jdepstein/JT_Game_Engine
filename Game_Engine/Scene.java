@@ -20,9 +20,9 @@ public class Scene {
 	private boolean mouseheld;
 	
 	/**
-	 * @param objects HashMap<String, ArrayList<Game_Object>>: All the Objects that are in the Scene
-	 * @param players HashMap<String, Player>: All the players in the Scene
-	 * @param text HashMap<String,ArrayList<Game_Text>>: All the Text that appear in the Scene
+	 * @param objects HashMap: All the Objects that are in the Scene
+	 * @param players HashMap: All the players in the Scene
+	 * @param text HashMap: All the Text that appear in the Scene
 	 * @param Window_Size int: The size of the window that scene in on 
 	 * @param backround Image: the Image to the Background of the scene 
 	 */
@@ -54,32 +54,35 @@ public class Scene {
 	public void create_S() {}
 	
 	/**
-	 * @param used for interactions with the Game panel helps get the keys that are typed
+	 * @param key char: used for interactions with the Game panel helps get the keys that are typed
 	 */
 	public void key_type(char key) {}
 		
 	/**
-	 * @param used for interactions with the Game panel helps get the keys that are released
+	 * @param key char: used for interactions with the Game panel helps get the keys that are released
 	 */
-	public void key_relase(char key) {}
+	public void  key_relase(char key) {}
 	
 	/**
-	 * @param used for interactions with the Game panel helps get the keys that are pressed
+	 * @param key char: used for interactions with the Game panel helps get the keys that are pressed
 	 */
 	public void key_pressed(char key) {};
 	
 	/**
-	 * @param used for interactions with the Game panel helps get the location of where a mouse is pressed
+	 * @param x integer: used for interactions with the Game panel helps get the location of where a mouse is pressed in x
+	 * @param y integer: used for interactions with the Game panel helps get the location of where a mouse is pressed in y
 	 */
 	public void mouse_pressed(int x, int y) {}
 	
 	/**
-	 * @param used for interactions with the Game panel helps get the location of where a mouse is released
+	 * @param x integer: used for interactions with the Game panel helps get the location of where a mouse is pressed in x
+	 * @param y integer: used for interactions with the Game panel helps get the location of where a mouse is pressed in y
 	 */
 	public void mouse_released(int x, int y) {}
 	
 	/**
-	 * @param used for interactions with the Game panel helps get the of where a mouse is clicked
+	 * @param x integer: used for interactions with the Game panel helps get the location of where a mouse is pressed in x
+	 * @param y integer: used for interactions with the Game panel helps get the location of where a mouse is pressed in y
 	 */
 	public void mouse_clicked(int x, int y) {}
 	
@@ -98,8 +101,8 @@ public class Scene {
 	
 	/**
 	 * This adds a new player to the Scene
-	 * @param String: The unique key that matches to this particular
-	 * @param Player: The Player that is being added to the Scene
+	 * @param key String: The unique key that matches to this particular
+	 * @param value Player: The Player that is being added to the Scene
 	 */
 	public void add_new_player(String key, Player value) {
 		this.players.put(key, value);}
@@ -124,21 +127,21 @@ public class Scene {
 	
 	/**
 	 * @param key String: The key value related to the text you are looking for
-	 * @return ArrayList<Game_Text>: The list of text objects related to the given key from this.text
+	 * @return ArrayList: The list of text objects related to the given key from this.text
 	 */
 	public ArrayList<Game_Text> getText(String key) {
 		return this.text.get(key);}
 	
 	/**
 	 * @param key String: The unique key related to the new list of Game_Objects
-	 * @param value ArrayList<Game_Object>: The list of objects that match the key
+	 * @param value ArrayList: The list of objects that match the key
 	 */
 	public void add_new_object(String key, ArrayList<Game_Object> value) {
 		this.objects.put(key, value);}
 	
 	/**
 	 * @param key String: The unique key related to the of Game_Objects you are looking for
-	 * @return ArrayList<Game_Object>: The list of objects that match the key
+	 * @return ArrayList: The list of objects that match the key
 	 */
 	public ArrayList<Game_Object> get_object(String key) {
 		return this.objects.get(key);}
@@ -177,7 +180,7 @@ public class Scene {
 	public void update() {}
 	
 	/**
-	 * @return ArrayList<Game_Object>: All the non player objects in the Scene
+	 * @return ArrayList: All the non player objects in the Scene
 	 */
 	public ArrayList<Game_Object> getAllObjects() {
 		ArrayList<Game_Object> allObjects = new ArrayList<Game_Object>();
@@ -187,7 +190,7 @@ public class Scene {
 		return allObjects;}
 
 	/**
-	 * @return ArrayList<Game_Object>: All the player's objects in the Scene
+	 * @return ArrayList: All the player's objects in the Scene
 	 */
 	public ArrayList<Game_Object> getAllObjectsPlayers() {
 		ArrayList<Game_Object> allObjects = new ArrayList<Game_Object>();
@@ -196,7 +199,7 @@ public class Scene {
 		return allObjects;}
 	
 	/**
-	 * @return ArrayList<Game_Text>: All the player texts in the Scene
+	 * @return ArrayList: All the player texts in the Scene
 	 */
 	public ArrayList<Game_Text> getAllObjectsPlayers_text() {
 		ArrayList<Game_Text> allObjects = new ArrayList<Game_Text>();
@@ -212,13 +215,13 @@ public class Scene {
 		this.players.replace(key, value);}
 	
 	/**
-	 * @return HashMap<String, Player>: returns the player hash map
+	 * @return HashMap: returns the player hash map
 	 */
 	public HashMap<String, Player> getPlayers() {
 		return players;}
 	
 	/**
-	 * @return ArrayList<Game_Text>: returns the non-player text
+	 * @return ArrayList: returns the non-player text
 	 */
 	public ArrayList<Game_Text> gettext(){	
 		ArrayList<Game_Text> allObjects = new ArrayList<Game_Text>();
@@ -228,20 +231,20 @@ public class Scene {
 
 	/**
 	 * @param key String: The unique key related to the of player you are looking for
-	 * @param value  ArrayList<Game_Text>: The text list will match that key 
+	 * @param value  ArrayList: The text list will match that key 
 	 */
 	public void add_txt(String key, ArrayList<Game_Text> value) {
 		this.text.put(key, value);}
 	
 	/**
 	 * @param key String: The unique key related to the of text you are looking for
-	 * @param value ArrayList<Game_Text>: The updated text that matches the key that will replaced the old one
+	 * @param value ArrayList: The updated text that matches the key that will replaced the old one
 	 */
 	public void replace_txt(String key, ArrayList<Game_Text> value) {
 		this.text.replace(key, value);}
 	
 	/**
-	 * @param obj HashMap<String, ArrayList<Game_Object>>: change all objects in the current scene
+	 * @param obj HashMap: change all objects in the current scene
 	 */
 	public void set_Objects(HashMap<String, ArrayList<Game_Object>> obj) {
 		this.objects = obj;}

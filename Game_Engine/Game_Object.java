@@ -33,14 +33,14 @@ private Color color;
 private int Win_size;
 
 /**
- * @param name String: The name of the object
- * @param loc JT_Point: The location of the object
- * @param dx double: The x movement of the object
- * @param dy double: The y movement of the object
- * @param img_path Stirng: The path to the image could be null if using polygon
- * @param poly Polygon: The shape that is for this object can be null if using image
- * @param color Color: Used to Color the poly
- * @param Win_size: The size of the window the object is being dawn on
+ * @param name The name of the object
+ * @param loc The location of the object
+ * @param dx The x movement of the object
+ * @param dy The y movement of the object
+ * @param img_path The path to the image could be null if using polygon
+ * @param poly The shape that is for this object can be null if using image
+ * @param color Used to Color the poly
+ * @param Win_size The size of the window the object is being dawn on
  */
 
 public Game_Object(String name, JT_Point loc , double dx, double dy, String img_path, Polygon poly, Color color, int Win_size) {
@@ -88,44 +88,44 @@ public Game_Object(String name, JT_Point loc , double dx, double dy, String img_
 		return bimage;}
 	
 	/**
-	 * @return double: the objects change in x
+	 * @return double the objects change in x
 	 */
 	public double getDx() {
 		return dx;}
 	
 	/**
-	 * @param double: the objects new change in x
+	 * @param dx the objects new change in x
 	 */
 	public void setDx(double dx) {
 		this.dx = dx;}
 	
 	/**
-	 * @return double: the objects change in y
+	 * @return double the objects change in y
 	 */
 	public double getDy() {
 		return dy;}
 	
 	/**
-	 * @param double: the objects new change in x
+	 * @param dy the objects new change in x
 	 */
 	public void setDy(double dy) {
 		this.dy = dy;}
 	
 	/**
-	 * @return JT_Point: get the objects location
+	 * @return JT_Point  get the objects location
 	 */
 	public JT_Point getLocation() {
 		return location;}
 	
 	/**
-	 * @param JT_Point: sets the objects location
+	 * @param location JT_Point  sets the objects location
 	 */
 	public void setLocation(JT_Point location) {
 		this.location = location;}
 	
 	
 	/**
-	 * @param double: sets the objects location x plus a new value
+	 * @param loc sets the objects location x plus a new value
 	 */
 	public void updateXpos(double loc) {
 		
@@ -133,57 +133,57 @@ public Game_Object(String name, JT_Point loc , double dx, double dy, String img_
 	
 	
 	/**
-	 * @param double: sets the objects location y plus a new value
+	 * @param loc sets the objects location y plus a new value
 	 */
 	public void updateYpos(double loc) {
 		this.getLocation().y= this.getLocation().y + loc;}
 
 	
 	/**
-	 * @param double: sets the objects location x 
+	 * @param loc sets the objects location x 
 	 */
 	public void setXPos(double loc) {
 		this.setLocation(new JT_Point(loc, this.getLocation().y));}
 	
 	/**
-	 * @param double: sets the objects location y
+	 * @param loc sets the objects location y
 	 */
 	public void setYPos(double loc) {
 		this.setLocation(new JT_Point(this.getLocation().x, loc));}
 	
 	/**
-	 * @return double: gets the objects width 
+	 * @return double  gets the objects width 
 	 */
 	public double getWidth() {
 		return width;}
 	
 	/**
-	 * @return double: gets the objects Height 
+	 * @return double  gets the objects Height 
 	 */
 	public double getHeight() {
 		return height;}
 	
 	
 	/**
-	 * @param double: sets the objects Width 
+	 * @param width sets the objects Width 
 	 */
 	public void setWidth(double width) {
 		this.width = width;}
 	
 	/**
-	 * @param double: sets the objects Height 
+	 * @param height sets the objects Height 
 	 */
 	public void setHeight(double height) {
 		this.height = height;}
 	
 	/**
-	 * @return String: gets the objects Name 
+	 * @return String  gets the objects Name 
 	 */
 	public String getName() {
 		return name;}
 	
 	/**
-	 * @return boolean: gets if objects on screen 
+	 * @return boolean  gets if objects on screen 
 	 */
 	public boolean isOnScreen() {
 		return onScreen;}
@@ -195,13 +195,13 @@ public Game_Object(String name, JT_Point loc , double dx, double dy, String img_
 		this.onScreen = !this.onScreen; }
 	
 	/**
-	 * @return Image: Gets the objects image
+	 * @return Image  Gets the objects image
 	 */
 	public Image getImage() {
 		return image;}
 	
 	/**
-	 * @return Polygon: Gets the objects Polygon
+	 * @return Polygon  Gets the objects Polygon
 	 */
 	public Polygon getPoly() {
 		return poly;}
@@ -212,7 +212,7 @@ public Game_Object(String name, JT_Point loc , double dx, double dy, String img_
 		
 	
 	/**
-	 * @return integer: Gets the objects health
+	 * @return integer Gets the objects health
 	 */
 	public int get_health() {
 		return health;}
@@ -224,13 +224,13 @@ public Game_Object(String name, JT_Point loc , double dx, double dy, String img_
 		this.health= this.health-1;}
 	
 	/**
-	 * @param health integer: Sets the health to a new value
+	 * @param health  Sets the health to a new value
 	 */
 	public void set_health(int health) {
 		this.health= health;}
 	
 	/**
-	 * @return integer: get the objects damage value
+	 * @return integer  get the objects damage value
 	 */
 	public int get_dmg() {
 		return dmg;}
@@ -273,7 +273,7 @@ public Game_Object(String name, JT_Point loc , double dx, double dy, String img_
 	
 	
 	/**
-	 * @return double: returns the objects angle of rotation
+	 * @return double  returns the objects angle of rotation
 	 */
 	public double getRotationAngle(){
 		return rotateangle;}
@@ -316,7 +316,7 @@ public Game_Object(String name, JT_Point loc , double dx, double dy, String img_
 	
 	
 	/**
-	 * @return double: get the objects distance
+	 * @return double  get the objects distance
 	 */
 	public double getdistance()
 		{return distance;}
@@ -358,7 +358,7 @@ public Game_Object(String name, JT_Point loc , double dx, double dy, String img_
 		updateYpos(dy);}
 		 
 	/**
-	 * @return boolean: checks to see if the objects  health is still above 0
+	 * @return boolean  checks to see if the objects  health is still above 0
 	 */
 	public boolean is_alive(){
 		
@@ -368,8 +368,8 @@ public Game_Object(String name, JT_Point loc , double dx, double dy, String img_
 		else {return false;}}
 		
 	/**	
-	 * @param other Game_Object: checks to see if it is overlapping this game object
-	 * @return boolean: returns if they are overlapping or not
+	 * @param other checks to see if it is overlapping this game object
+	 * @return boolean if they are overlapping or not
 	 */
 	public boolean isOverlapping(Game_Object other) {
 		
@@ -390,7 +390,7 @@ public Game_Object(String name, JT_Point loc , double dx, double dy, String img_
 		    return true;}
 	
 	/**
-	 * @param page Graphics: the page the object is being drawn on
+	 * @param page the page the object is being drawn on
 	 */
 	public void draw(Graphics page) {
 		 page = (Graphics2D) page;
@@ -404,9 +404,9 @@ public Game_Object(String name, JT_Point loc , double dx, double dy, String img_
 			page.fillPolygon(this.getPoly());}}
 	
 	/**
-	 * @param x integer: the location of the click in x
-	 * @param y integer: the location of the click in y
-	 * @return boolean: if the object was clicked or not
+	 * @param x the location of the click in x
+	 * @param y the location of the click in y
+	 * @return if the object was clicked or not
 	 */
 	public boolean has_clicked(int x, int y) {
 		if (this.poly != null) {

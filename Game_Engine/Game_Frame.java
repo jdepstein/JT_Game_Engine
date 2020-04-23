@@ -17,8 +17,8 @@ public class Game_Frame  extends JFrame implements Runnable{
 	    private static int WindowSize;
 	    
 	    /**
-	     * @param size integer: The size of the window
-	     * @param sc Scene: The scene that will be playing out on the window 
+	     * @param size: The size of the window
+	     * @param sc: The scene that will be playing out on the window 
 	     */
 	     public Game_Frame(int size, Scene sc) {  
 	    	  Game_Frame.WindowSize= size;
