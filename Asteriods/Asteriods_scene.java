@@ -126,7 +126,8 @@ public class Asteriods_scene extends Scene {
 		/**
 		 * Update Score
 		 */
-		super.getText("Score").remove(0);
+		if(super.getText("Score").size>0){
+			super.getText("Score").remove(0);}
 		
 		super.getText("Score").add(new Game_Text(Integer.toString(Player.getScore()), 650, 15, Color.white, true, "Serif", 20));
 		
