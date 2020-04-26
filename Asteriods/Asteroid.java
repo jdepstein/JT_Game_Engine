@@ -58,15 +58,15 @@ public class Asteroid extends Game_Object{
 	 */
 	
 	private static JT_Point generateX_Y(int windowSize, double shipX, double shipY) {
-		int RX = (int) (Math.random() * (windowSize - 40) + 1);
+		int RX = (int) (Math.random() * (windowSize - 75) + 1);
 		
-		int RY = (int) (Math.random() * (windowSize - 40) + 1);
+		int RY = (int) (Math.random() * (windowSize - 75) + 1);
 		
 		while (RX < 100 + shipX && RX < shipX+ 100 && RY < 100 + shipY && RY < shipY+ 100) {
 			
-			RX = (int) (Math.random() * (windowSize - 40) + 1);
+			RX = (int) (Math.random() * (windowSize - 75) + 1);
 			
-			RY = (int) (Math.random() * (windowSize - 40) + 1);
+			RY = (int) (Math.random() * (windowSize - 75) + 1);
 		}
 		
 		return new JT_Point(RX,RY);
